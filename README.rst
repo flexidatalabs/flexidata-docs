@@ -1,9 +1,9 @@
-Template for the Read the Docs tutorial
-=======================================
+=======================
+Flexidata Documentation
+=======================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Introduction
+------------
 
-Read the tutorial here:
+Welcome to the Flexidata documentation repository! This repository contains all the documentation related to the Flexidata project.
 
-https://docs.readthedocs.io/en/stable/tutorial/
