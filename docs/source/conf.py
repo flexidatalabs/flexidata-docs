@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'flexidata'
-copyright = '2021, Graziella'
+copyright = '2024, flexidatalabs'
 author = 'flexidatalabs'
 
 release = '0.1'
