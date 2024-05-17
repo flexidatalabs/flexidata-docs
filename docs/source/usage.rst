@@ -10,7 +10,7 @@ To use flexidata, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install flexidata
 
 Creating recipes
 ----------------
