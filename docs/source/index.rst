@@ -14,5 +14,8 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-   usage
+   installation
+   parsing_pdf_files
