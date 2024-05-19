@@ -1,5 +1,5 @@
 Parsing PDF Files
------------------
+============
 
 To parse PDF files using flexidata, you need to import the necessary modules and classes from the flexidata library. Here's how you can do it:
 
