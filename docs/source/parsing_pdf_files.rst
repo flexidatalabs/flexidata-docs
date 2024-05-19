@@ -54,3 +54,34 @@ The `parse` method returns a list of elements, where each element is a dictionar
    }
 
 In this example, the "Type" field indicates the type of content (e.g., "NarrativeText"), the "Text" field contains the actual text content extracted, and the "metadata" field contains additional information about the content, such as the file path, detected languages, file type, page number, bounding box coordinates, layout dimensions, and the extraction source.
+
+Content Types
+-------------
+
+The parsing process identifies several types of content in the PDF file. Here's a brief explanation of each type:
+
+- `Email`: This type is used to identify email addresses in the text.
+- `Title`: This type is used to identify titles or headings in the text.
+- `ListItem`: This type is used to identify list items in the text.
+- `NarrativeText`: This type is used to identify general body text or paragraphs.
+- `Unknown`: This type is used when the content type cannot be determined.
+
+The `parse` method will return one of these types for each piece of text content extracted from the PDF file.
+
+FileReaderSource
+----------------
+
+The `FileReaderSource` class defines several constants that represent the different sources from which a PDF file can be read:
+
+- `WEB_URL`: This source type is used when the PDF file is to be read from a web URL.
+- `LOCAL`: This source type is used when the PDF file is to be read from a local file system.
+- `S3`: This source type is used when the PDF file is to be read from an Amazon S3 bucket.
+- `GOOGLE_DRIVE`: This source type is used when the PDF file is to be read from Google Drive.
+
+The user can specify the source type when creating an instance of the `PdfParser` class. This is done by setting the `source` variable to one of the constants defined in the `FileReaderSource` class. For example, if the PDF file is to be read from a local file system, you would do the following:
+
+.. code-block:: python
+
+   source = FileReaderSource.LOCAL
+
+This tells the `PdfParser` class to read the PDF file from a local file system. Similarly, you can set `source` to `FileReaderSource.WEB_URL`, `FileReaderSource.S3`, or `FileReaderSource.GOOGLE_DRIVE` to read the PDF file from a web URL, an Amazon S3 bucket, or Google Drive, respectively.
