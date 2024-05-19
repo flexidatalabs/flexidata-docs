@@ -97,9 +97,6 @@ There are three types of ParserMethods supported:
 
 3. **ParserMethod.MODEL**: This method uses a trained model to parse the PDF. It is the most accurate but also the slowest method.
 
-ParserMethod.OCR
-----------------
-
 When using `ParserMethod.OCR`, you can choose from three different OCR services:
 
 1. **OCREngine.PADDLE**: This is the default OCR engine. If no `OCR_ENGINE` environment variable is set, Tesseract will be used.
@@ -121,4 +118,10 @@ You can get an instance of the OCR engine using the `get_ocr_agent` function fro
 
    ocr_agent = get_ocr_agent()
 
-This will return an instance of the OCR engine specified by the `OCR_ENGINE` environment variable. If no `OCR_ENGINE` environment variable is set, it will return an instance of the default OCR engine (OCREngine.PADDLE).
+This will return an instance of the OCR engine specified by the `OCR_ENGINE` environment variable. If no `OCR_ENGINE` environment variable is set, it will return an instance of the default OCR engine (OCREngine.TESSERACT).
+
+You can also specify the OCR engine directly when calling `get_ocr_agent()`. For example, to get an instance of the GOOGLE_VISION OCR engine, you can do:
+
+.. code-block:: python
+
+   ocr_agent = get_ocr_agent(OCREngine.GOOGLE_VISION)
