@@ -12,8 +12,7 @@ To use flexidata, first install it using pip:
 
    (.venv) $ pip install flexidata
 
-Parsing PDF files
-----------------
+
 
 
 
