@@ -14,4 +14,4 @@ Contents
    :maxdepth: 2
 
    installation
-   parsing_pdf_files
+   parser
