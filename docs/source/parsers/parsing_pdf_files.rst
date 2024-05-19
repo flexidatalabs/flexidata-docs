@@ -99,13 +99,13 @@ There are three types of ParserMethods supported:
 
 When using `ParserMethod.OCR`, you can choose from three different OCR services:
 
-1. **OCREngine.PADDLE**: This is the default OCR engine. If no `OCR_ENGINE` environment variable is set, Tesseract will be used.
+1. **OCREngine.PADDLE**: This is the default OCR engine. If no :red:`OCR_ENGINE` environment variable is set, Tesseract will be used.
 
-2. **OCREngine.TESSERACT**: This is an alternative OCR engine. To use it, set the `OCR_ENGINE` environment variable to `tesseract`.
+2. **OCREngine.TESSERACT**: This is an alternative OCR engine. To use it, set the :red:`OCR_ENGINE` environment variable to :red:`tesseract`.
 
-3. **OCREngine.GOOGLE_VISION**: This is another alternative OCR engine. To use it, set the `OCR_ENGINE` environment variable to `google_vision`.
+3. **OCREngine.GOOGLE_VISION**: This is another alternative OCR engine. To use it, set the :red:`OCR_ENGINE` environment variable to :red:`google_vision`.
 
-The package will try to get the engine configuration from the `OCR_ENGINE` environment variable.
+The package will try to get the engine configuration from the :red:`OCR_ENGINE` environment variable.
 
 Getting an OCR Agent
 --------------------
@@ -118,7 +118,7 @@ You can get an instance of the OCR engine using the `get_ocr_agent` function fro
 
    ocr_agent = get_ocr_agent()
 
-This will return an instance of the OCR engine specified by the `OCR_ENGINE` environment variable. If no `OCR_ENGINE` environment variable is set, it will return an instance of the default OCR engine (OCREngine.TESSERACT).
+This will return an instance of the OCR engine specified by the `OCR_ENGINE` environment variable. If no `OCR_ENGINE` environment variable is set, it will return an instance of the default OCR engine (OCREngine.PADDLE).
 
 You can also specify the OCR engine directly when calling `get_ocr_agent()`. For example, to get an instance of the GOOGLE_VISION OCR engine, you can do:
 

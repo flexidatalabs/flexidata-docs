@@ -1,4 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
+from docutils import nodes
 
 # -- Project information
 
@@ -33,3 +34,13 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+def setup(app):
+    app.add_role('red', colorize('red', 'span'))
+
+def colorize(color_name, element_name):
+    def callback(name, rawtext, text, lineno, inliner, options={}, content=[]):
+        open_tag = '<{element} style="color: {color};">'.format(element=element_name, color=color_name)
+        close_tag = '</{element}>'.format(element=element_name)
+        return [nodes.raw('', open_tag + text + close_tag, format='html')], []
+    return callback
