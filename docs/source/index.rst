@@ -14,4 +14,4 @@ Contents
    :maxdepth: 2
 
    installation
-   parser
+   parsers
