@@ -40,7 +40,7 @@ def setup(app):
 
 def colorize(color_name, element_name):
     def callback(name, rawtext, text, lineno, inliner, options={}, content=[]):
-        open_tag = '<{element} style="color: {color};">'.format(element=element_name, color=color_name)
+        open_tag = '<{element} style="color: {color}; font-style: italic;">'.format(element=element_name, color=color_name)
         close_tag = '</{element}>'.format(element=element_name)
         return [nodes.raw('', open_tag + text + close_tag, format='html')], []
     return callback
