@@ -96,3 +96,29 @@ There are three types of ParserMethods supported:
 2. **ParserMethod.OCR**: This method uses Optical Character Recognition to read the text from the PDF. It is slower than the FAST method but can read text from images and scanned documents.
 
 3. **ParserMethod.MODEL**: This method uses a trained model to parse the PDF. It is the most accurate but also the slowest method.
+
+ParserMethod.OCR
+----------------
+
+When using `ParserMethod.OCR`, you can choose from three different OCR services:
+
+1. **OCREngine.PADDLE**: This is the default OCR engine. If no `OCR_ENGINE` environment variable is set, Tesseract will be used.
+
+2. **OCREngine.TESSERACT**: This is an alternative OCR engine. To use it, set the `OCR_ENGINE` environment variable to `tesseract`.
+
+3. **OCREngine.GOOGLE_VISION**: This is another alternative OCR engine. To use it, set the `OCR_ENGINE` environment variable to `google_vision`.
+
+The package will try to get the engine configuration from the `OCR_ENGINE` environment variable.
+
+Getting an OCR Agent
+--------------------
+
+You can get an instance of the OCR engine using the `get_ocr_agent` function from the `flexidata.ocr.agent` module. Here is how you can do it:
+
+.. code-block:: python
+
+   from flexidata.ocr.agent import get_ocr_agent
+
+   ocr_agent = get_ocr_agent()
+
+This will return an instance of the OCR engine specified by the `OCR_ENGINE` environment variable. If no `OCR_ENGINE` environment variable is set, it will return an instance of the default OCR engine (OCREngine.PADDLE).
