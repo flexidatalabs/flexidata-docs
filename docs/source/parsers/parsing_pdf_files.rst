@@ -85,3 +85,14 @@ The user can specify the source type when creating an instance of the `PdfParser
    source = FileReaderSource.LOCAL
 
 This tells the `PdfParser` class to read the PDF file from a local file system. Similarly, you can set `source` to `FileReaderSource.WEB_URL`, `FileReaderSource.S3`, or `FileReaderSource.GOOGLE_DRIVE` to read the PDF file from a web URL, an Amazon S3 bucket, or Google Drive, respectively.
+
+ParserMethod
+------------
+
+There are three types of ParserMethods supported:
+
+1. **ParserMethod.FAST**: This method is the quickest way to parse PDF files. It directly reads the text embedded in the PDF.
+
+2. **ParserMethod.OCR**: This method uses Optical Character Recognition to read the text from the PDF. It is slower than the FAST method but can read text from images and scanned documents.
+
+3. **ParserMethod.MODEL**: This method uses a trained model to parse the PDF. It is the most accurate but also the slowest method.
